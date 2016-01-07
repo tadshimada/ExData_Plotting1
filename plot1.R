@@ -1,6 +1,6 @@
 ##
 ## filename: plot1.R
-## - This R script generates the histgram and saves it into PNG file, 'plot1.png',
+## - This R script generates the histogram and saves it into PNG file, 'plot1.png',
 ## in the same directory where the script is run.
 ##
 library(dplyr)
@@ -19,10 +19,10 @@ read.hpc <- function() {
 
 # read the input file
 hpc <- read.hpc()
-# open PNG graphic device to store the histgram in 480x480 PNG file
+# open PNG graphic device to store the histogram in 480x480 PNG file
 png(filename = "./plot1.png", width = 480, height = 480, units = "px")
 
-# generate the histgram
+# generate the histogram
 hist(as.numeric(hpc$Global_active_power),
     col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
 
