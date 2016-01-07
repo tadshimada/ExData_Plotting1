@@ -20,7 +20,7 @@ read.hpc <- function() {
 # read the input file
 hpc <- read.hpc()
 
-# open PNG graphic device to store the histogram in 480x480 PNG file
+# open PNG graphic device to store the line plot in 480x480 PNG file
 png(filename = "./plot2.png", width = 480, height = 480, units = "px")
 
 # concatenate 'Date' and 'Time' field to create the complete timestamp.
