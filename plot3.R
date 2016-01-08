@@ -1,13 +1,18 @@
-##
+#######################################################################
 ## filename: plot3.R
-## - This R script generates multi-line plots with legend and saves it into PNG file, 'plot3.R'.
-##
+## - This R script generates multi-line plots with legend and saves
+## the image into PNG file (plot3.R).
+#######################################################################
+
+#----------------------------------------
+# function to load the input data file
+#----------------------------------------
 read.hpc <- function() {
   hpc <- read.table("./data/household_power_consumption.txt",
                     header = TRUE,
                     sep = ";",
                     stringsAsFactors = FALSE)
-  
+
   # only keep the data from 2007-02-01 to 2007-02-02.
   hpc <- subset(hpc, Date == "1/2/2007" | Date == "2/2/2007")
   # return the filtered data for plotting
@@ -26,9 +31,9 @@ datetime <- strptime(paste(hpc$Date, hpc$Time), "%d/%m/%Y %H:%M:%S")
 # open the PNG graphic device to save the image into a file.
 png(filename = "./plot3.png", width = 480, height = 480, units = "px")
 
-# draw the multi-line plot
-plot(datetime, hpc$Sub_metering_1, 
-     type = "l", lty = "solid", col = "black", xlab = "", ylab = "Energy sub metering")
+# draw the multi-line plot. first set up the plotting region by specifying type = "n"
+plot(datetime, hpc$Sub_metering_1, type = "n", xlab = "", ylab = "Energy sub metering")
+lines(datetime, hpc$Sub_metering_1, type = "l", lty = "solid", col = "black")
 lines(datetime, hpc$Sub_metering_2, type = "l", lty = "solid", col = "red")
 lines(datetime, hpc$Sub_metering_3, type = "l", lty = "solid", col = "blue")
 

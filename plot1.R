@@ -1,10 +1,12 @@
-##
+######################################################################################
 ## filename: plot1.R
 ## - This R script generates the histogram and saves it into PNG file, 'plot1.png',
 ## in the same directory where the script is run.
-##
-library(dplyr)
+######################################################################################
 
+#----------------------------------------
+# function to load the input data file
+#----------------------------------------
 read.hpc <- function() {
     hpc <- read.table("./data/household_power_consumption.txt",
         header = TRUE,
@@ -12,7 +14,7 @@ read.hpc <- function() {
         stringsAsFactors = FALSE)
 
     # only keep the data from 2007-02-01 to 2007-02-02.
-    hpc <- filter(hpc, Date == "1/2/2007" | Date == "2/2/2007")
+    hpc <- subset(hpc, Date == "1/2/2007" | Date == "2/2/2007")
     # return the filtered data for plotting
     hpc
 }
