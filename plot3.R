@@ -1,5 +1,7 @@
 #######################################################################
-## filename: plot3.R
+## Filename: plot3.R
+## Author: Tad Shimada
+## Description:
 ## - This R script generates multi-line plots with legend and saves
 ## the image into PNG file (plot3.R).
 #######################################################################

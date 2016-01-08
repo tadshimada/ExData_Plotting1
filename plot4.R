@@ -1,5 +1,7 @@
 #######################################################################################
-## filename: plot4.R
+## Filename: plot4.R
+## Author: Tad Shimada
+## Description:
 ## - This R script generates 4 different line plot. Then, it saves the image output
 ## into a PNG file (plot4.R) in the same directory where the script is executed.
 #######################################################################################

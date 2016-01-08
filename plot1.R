@@ -1,5 +1,7 @@
 ######################################################################################
-## filename: plot1.R
+## Filename: plot1.R
+## Author: Tad Shimada
+## Description:
 ## - This R script generates the histogram and saves it into PNG file, 'plot1.png',
 ## in the same directory where the script is run.
 ######################################################################################

@@ -1,5 +1,7 @@
 ######################################################################################
-## filename: plot2.R
+## Filename: plot2.R
+## Author: Tad Shimada
+## Description:
 ## - This R script generates the line plot and saves it into PNG file, 'plot2.png',
 ## in the same directory where the script is run.
 ######################################################################################
